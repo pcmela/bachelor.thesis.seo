@@ -1,0 +1,22 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+    <h2>Pozice konkurence</h2>
+    <p>Napovídání konkurence je dostupné pouze pro registrované uživatele.</p>
+    <h3>Postup</h3>
+    <p>Po přidání internetové stránky u svého účtu a provedení testů pro zadaná klíčová slovo lze vyhledat možnou konkurenci pro danou stránku.
+    Konkurence se vyhledává ve výsledcích fulltextových vyhledávačů na zadaná klíčová slova.</p>
+    <img alt="konkurence" src="{$basePath}/images/mozna_konkurence.PNG" />
+
+    <div class="buttonUi"><a n:href=":Front:Homepage:seo">Zpět</a></div>
+</div>

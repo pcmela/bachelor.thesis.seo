@@ -1,0 +1,71 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+<script type="text/javascript">
+    $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	});
+$(document).ready(function(){
+
+
+    $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+    $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+            // nette ajax init
+            $("a.ajax").live("click", function (event) {
+                //alert(this.href);
+                    event.preventDefault();
+                    $.get(this.href);
+            });
+
+});
+</script>
+<div id="content">
+    <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+    <div class="buttonUi"><a n:href=":Admin:Seo:Homepage:default">Zpět</a></div>
+    {control myWebGrid}
+
+    {if $submit}
+    <h3>Ranky:</h3>
+    <ul class="resultBox">
+        <li class="info">PageRank: {$pageRank}/10</li>
+        <li class="info">SRank: {$sRank}</li>
+        <li class="info">AlexaRank: {$alexaRank}</li>
+    </ul><br />
+
+    <h3>Zpětné odkazy:</h3>
+    <ul class="resultBox">
+        <li class="info">Zpětné odkazy na stránku: {$backlinks}</li>
+    </ul><br />
+
+    <h3>Popularita webu:</h3>
+    <ul class="resultBox">
+        <li class="info">Seznam: {$seznamPopularity}</li>
+        <li class="info">Google: {$googlePopularity}</li>
+        <li class="info">Bing: {$bingPopularity}</li>
+    </ul><br />
+
+    <h3>Indexované stránky webu:</h3>
+    <ul class="resultBox">
+        <li class="info">Seznam: {$seznamIndexPages}</li>
+        <li class="info">Google: {$googleIndexPages}</li>
+        <li class="info">Bing: {$bingIndexPages}</li>
+    </ul><br />
+
+    <h3>Ostatní:</h3>
+    <ul class="resultBox">
+        
+        <li class="info">Počet záznamů na wikipedia.org: {$wikiBackLinks}</li>
+    </ul><br />
+    {/if}
+</div>

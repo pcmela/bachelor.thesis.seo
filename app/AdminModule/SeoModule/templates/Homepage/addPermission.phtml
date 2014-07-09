@@ -1,0 +1,25 @@
+{block #content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#frm-addPermision").submit(function(event) {
+            $(".rules").text("");
+        });
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	});
+    });
+</script>
+
+<!-- Main -->
+<div id="content">
+    <div class="buttonUi"><a n:href="default">Zpět</a></div>
+    <div class="rules"></div>
+    <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+    {control addPermision}
+</div>
+<!-- End Main -->
+

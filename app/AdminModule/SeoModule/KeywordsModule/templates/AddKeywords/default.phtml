@@ -1,0 +1,201 @@
+{block #content}
+
+        
+        <script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+
+	
+	<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+        <script type="text/javascript" src="{$baseUri}/js/function.js"></script>
+
+
+
+        <script type="text/javascript">
+        // gridito init
+        var complete = 0;
+        $(document).ready(function(){
+
+
+        
+            $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+            // nette ajax init
+            $("a.ajax").live("click", function (event) {
+                //alert(this.href);
+                    event.preventDefault();
+                    $.get(this.href);
+            });
+            
+
+        });
+
+
+        </script>
+
+<style type="text/css">
+    #dialog-modal{
+        display: none;
+    }
+</style>
+
+<script  type="text/javascript">
+$(document).ready(function(){
+   $("#frmsearchKw-send").click(function(event){
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		$( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+		$( "#dialog-modal" ).dialog({
+			height: 140,
+			modal: true,
+                        closeOnEscape: false,
+                        open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+		});
+	});
+
+        $("#frm-searchKw").submit(function(event) {
+            $(".rules").text("");
+
+            var p = document.forms['form_keywords'];
+            if(p['frmsearchKw-kw'].value != ""){
+
+                $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+                    $( "#dialog-modal" ).dialog({
+                            height: 140,
+                            modal: true,
+                            closeOnEscape: false,
+                            open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+                    });
+            }
+        });
+
+        $("#frm-updateWords").submit(function(event) {
+        
+                $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+                    $( "#dialog-modal" ).dialog({
+                            height: 140,
+                            modal: true,
+                            closeOnEscape: false,
+                            open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+                    });
+            
+        });
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+		//$( "a", ".demo" ).click(function() { return false; });
+
+
+	});
+ });
+</script>
+
+<div id="dialog-modal" title="Požadavek se zpracovává">
+	<p>Počkejte prosím, probíhá zpracování dat.</p>
+</div>
+
+
+
+
+
+
+<!-- Main -->
+        {if $editPermission !== null}
+        <div id="sidebar">
+            <h2 class="style2">Detail</h2>
+        </div>
+        <div id="msg"></div>
+        <br /><br /><br /><br /><br /><br />
+        {if $error}
+        
+        <div id="sidebarSeoAdmin">
+            <h3>Konkurence</h3>
+            {foreach $currentConcurrency as $row}
+                <a href='{link concurrency, $id, $row->es_concurrency_domain}'>{$row->es_concurrency_domain}</a><br />
+
+            {/foreach}
+                <br />
+                {if $editPermission}
+                    {if $role == 1}
+                        <a href="{plink :Admin:Seo:Keywords:Concurrency:detail, $id}"></a>
+                        <a href="{plink :Admin:Seo:Keywords:Concurrency:detail, $id}">Spravovat Konkurenci</a>
+                    {/if}
+                {/if}
+        </div>
+        <div id="contentSeoAdmin">
+        <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+        <div class="buttonUi">
+            <a href="{plink :Admin:Seo:Homepage:default}" >Zpet</a>
+        </div><br />
+        {if $role == 1}
+            <div class="buttonUi">
+        <a n:href="find, $id">Klicova slova</a> 
+
+        <a n:href=":Admin:Seo:Keywords:Concurrency:default, $id">Konkurence</a>
+        <a n:href=":Admin:Seo:Keywords:OverAll:default, $id">Celková analýza</a>
+        <a n:href="keywords, $id">Váha klíčových slov</a>
+        </div>
+        {/if}
+                            {control $filters begin}
+                            <fieldset>
+                                <legend>Filter</legend>
+                                <p>
+                                    {$filters["search"]->label} {$filters["search"]->control}
+                                    {$filters["s"]->control}
+                                </p>
+                            </fieldset>
+                            {control $filters end}
+                                {if $cache == true}
+                                {cache $id, expire => '+7 days', tags => array("grid$id")}
+                                    {control grid}
+
+                                {/cache}
+                                {else}
+                                    {control grid}
+                                {/if}
+                                <div class="buttonUi">
+                                {if $cachedUpdate == true}
+                                    {control updateWords}
+                                {/if}
+                                </div><br />
+            {if $role == 1}
+            <p>Jedno klíčové slovo na jednom řádku.</p>
+				{control searchKw}
+            <div class="rules"></div>
+            {/if}
+                            <!--<form><input type="submit" value="submit" id="submit_signal"></form>-->
+
+                            <br />
+                            <div class="buttonUi">
+                            <a href="{plink :Admin:Seo:Homepage:default}" >Zpet</a>
+                            </div>
+</div>
+        {/if}
+        {else}
+            <div id="sidebar">
+            <h2 class="style2">Detail</h2>
+            </div>
+            <div id="msg"></div>
+            <br /><br /><br /><br /><br /><br />
+            <div id="contentSeoAdmin">
+                <div class="buttonUi">
+                    <a href="{plink :Admin:Seo:Homepage:default}" >Zpet</a>
+                </div><br />
+                <p>Nemáte práva pro prohlížení stránky!</p>
+            </div>
+        {/if}
+                            
+                            
+                            
+			
+
+<!-- End Main -->

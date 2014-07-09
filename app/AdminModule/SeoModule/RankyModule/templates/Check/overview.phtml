@@ -1,0 +1,35 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+    $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	});
+</script>
+
+<div id="sidebar">
+    <h2 class="style2">Detail</h2>
+</div>
+<br /><br /><br /><br />
+<div class="buttonUi"><a n:href=":Admin:Seo:Ranky:Check:default">Zpět</a></div>
+<h3>Page Rank</h3>
+    <img src="{plink :Admin:Seo:Ranky:Check:graph}{$id}?type=1" alt="PageRank"/>
+
+    <h3>Seznam Rank</h3>
+    <img src="{plink :Admin:Seo:Ranky:Check:graph}{$id}?type=2" alt="Seznam Rank"/>
+
+    <h3>Alexa Rank</h3>
+    <img src="{plink :Admin:Seo:Ranky:Check:graph}{$id}?type=3" alt="Seznam Rank"/>
+
+    <h3>Zpětné odkazy</h3>
+    <img src="{plink :Admin:Seo:Ranky:Check:graph}{$id}?type=4" alt="Seznam Rank"/>
+
+    <h3>Popularita stránky ve vyhledávačích (v tisících)</h3>
+    <img src="{plink :Admin:Seo:Ranky:Check:graph}{$id}?type=5" alt="Seznam Rank"/>
+
+    <h3>Indexované stránky ve vyhledávačích (v tisících)</h3>
+    <img src="{plink :Admin:Seo:Ranky:Check:graph}{$id}?type=6" alt="Seznam Rank"/>
+
+    <h3>Zpětné odkazy ve Wikipedia.org</h3>
+    <img src="{plink :Admin:Seo:Ranky:Check:graph}{$id}?type=7" alt="Seznam Rank"/>

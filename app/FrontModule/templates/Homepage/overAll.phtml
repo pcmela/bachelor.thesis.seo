@@ -1,0 +1,27 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+    <h2>Celková analýza</h2>
+    <p>Celkovou analýzu mohou provádět pouze registrování uživatelé. Celková analýza ukáže pomocí grafu jak si stají zadaný web oproti konkurenci.
+    Každá pozice dostává bodové ohodnocení, kterou ovlivňuje zadaná váha klíčového slova.</p>
+
+    <h3>Postup</h3>
+    <p>Prvním krokem je přidat webovou stránku a klíčová slova, poté rozklikneme položku Váha klíčových slov u detailu stránky a nastavíme ke každému slovu 
+    váhu na stupnici od 1 do 10.</p>
+    <img src="{$basePath}/images/vaha_klicovych_slov.PNG" alt="vaha klicovych slov" />
+    <p>Poté se vrátíme zpět na detail stránky a nad tabulkou s klíčovými slovy se nalézá tlačítko Celková analýza stránky. Budeme přesměrování na stránku
+    kde se vykreslí čtyři grafy. Graf pro vyhledávač Seznam.cz, Google.cz, Seznam.cz + Goodle.cz a pro všechny testované vyhledávače dohromady.</p>
+    <img src="{$basePath}/images/celkova_analyza.PNG" alt="celkova analyza" width="500" height="250" />
+
+    <div class="buttonUi"><a n:href=":Front:Homepage:seo">Zpět</a></div>
+</div>

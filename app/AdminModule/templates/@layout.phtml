@@ -1,0 +1,53 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ELPOD - Administrace</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="{$baseUri}/css/default.css" rel="stylesheet" type="text/css" media="all" />
+
+<style type="text/css">
+@import "{$baseUri}/css/layout.css";
+</style>
+
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="{$baseUri}/js/netteForms.js"></script>
+<script type="text/javascript" src="{$baseUri}/js/jquery.nette.js"></script>
+
+</head>
+<body>
+<div id="header">
+	<div id="logo">
+		<h1><a n:href=":Front:Homepage:default">ELPOD</a></h1>
+	</div>
+        
+	{cache}
+	<div id="menu">
+		<ul>
+			<li class="first"><a href="{link :Admin:User:default}">Změnit heslo</a></li>
+			<li><a href="{link logout!}">LogOut</a></li>
+		</ul>
+	</div>
+        {/cache}
+</div>
+<!-- end #header -->
+<div id="page">
+	{include #content}
+	
+	<!-- end #content -->
+    <div id="sidebar">
+        <h2 class="style2">Rozcestnik</h2>
+        <p><a href="{link :Admin:User:default}">Změnit heslo</a></p>
+        <p><a href="{link logout!}">LogOut</a></p>
+    </div>
+	<!-- end #sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>Nástroj pro usnadnění Vašeho podnikání.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

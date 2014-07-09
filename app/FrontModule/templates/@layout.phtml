@@ -1,0 +1,85 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ELPOD</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="{$baseUri}/css/default.css" rel="stylesheet" type="text/css" media="all" />
+
+<style type="text/css">
+@import "layout.css";
+</style>
+
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="{$baseUri}/js/netteForms.js"></script>
+</head>
+<body>
+<div id="header">
+	<div id="logo">
+		<h1><a n:href=":Front:Homepage:default">ELPOD</a></h1>
+	</div>
+        {if !$isLogged}
+        <div id="login">
+        {control login begin}
+
+        {var form => $control['login']}
+        <table>
+            <tr class="required">
+                    <th>{$form['email']->label}</th>
+
+                    <td>{$form['email']->control}</td>
+            </tr>
+
+            <tr class="required">
+                    <th>{$form['password']->label}</th>
+
+                    <td>{$form['password']->control}</td>
+            </tr>
+            <tr>
+                    <th>&nbsp;</th>
+
+                    <td>{$form['login']->control}</td>
+            </tr>
+        </table>
+        {control login errors}
+        {control login end}
+        </div>
+        {else}
+        <div id="login">
+            <p>Jste přihlášen.</p><p><a n:href=":Admin:Homepage:default">Vstup do administrace</a></p>
+            <p><a n:href="logout!">Odhlásit</a></p>
+        </div>
+        {/if}
+	<div id="menu">
+		<ul>
+			<li class="first"><a n:href=":Front:Homepage:products" accesskey="1" title="">Produkty</a></li>
+			<li><a n:href=":Front:Homepage:services" accesskey="2" title="">Služby</a></li>
+
+			<li><a n:href=":Front:Homepage:onas" accesskey="5" title="">O nás</a></li>
+                        <li><a n:href="Registrace:Registrace:default">Zaregistrujte se</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end #header -->
+<div id="page">
+        {include #content}
+	<!-- end #content -->
+	<div id="sidebar">
+		<h2 class="style2">SEO nástroje</h2>
+		<img src="{$basePath}/images/homepage10.jpg" alt="" width="95" height="113" class="alignleft nopad" />
+		<p>Nástroj pro validaci internetových stránek pro účely SEO a SEM.</p>
+		<p class="more"><a href="#">Více zde</a></p>
+		
+		
+	</div>
+	<!-- end #sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+<!-- end #page -->
+<div id="footer">
+	<p>Nástroj pro usnadnění Vašeho podnikání.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

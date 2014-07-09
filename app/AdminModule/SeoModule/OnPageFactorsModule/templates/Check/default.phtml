@@ -1,0 +1,191 @@
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{$baseUri}/js/validation.js"></script>
+<script type="text/javascript">
+    $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	});
+$(document).ready(function(){
+
+    $("#frm-checkForm").submit(function(event) {
+        $(".rules").text("");
+        var p = document.forms['frm-checkForm'];
+        if(validate(p['frmcheckForm-webUrl'].value)){
+
+                $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+                    $( "#dialog-modal" ).dialog({
+                            height: 140,
+                            modal: true,
+                            closeOnEscape: false,
+                            open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+                    });
+        }
+
+        });
+
+});
+</script>
+
+<div id="dialog-modal" title="Požadavek se zpracovává">
+	<p>Počkejte prosím, probíhá zpracování dat.</p>
+</div>
+
+<style type="text/css">
+    #dialog-modal{
+        display: none;
+    }
+</style>
+
+
+<div id="content">
+    <div class="buttonUi"><a n:href=":Admin:Seo:Homepage:default">Zpět</a></div>
+    <div class="rules"></div>
+    {control checkForm}
+
+
+    {if $data}
+    <h2>Celkové hodnocení: {$sumScore}/100 bodů</h2>
+    <h2>Hlavička: {$head}/55 bodů</h2>
+    <ul class="resultBox">
+        {if $title["status"] === "ok"}
+        <li class="ok">
+        {else}
+        <li class="err">
+        {/if}
+            {$title["data"]}
+        </li>
+
+
+        {if $description["status"] === "ok"}
+        <li class="ok">
+        {else}
+        <li class="err">
+        {/if}
+            {$description["data"]}
+        </li>
+
+        {if $keywords["status"] === "ok"}
+        <li class="ok">
+        {else}
+        <li class="err">
+        {/if}
+            {$keywords["data"]}
+        </li>
+
+
+        {if $author["status"] === "ok"}
+        <li class="ok">
+        {else}
+        <li class="err">
+        {/if}
+            {$author["data"]}
+        </li>
+
+        {if $robotsInfo["status"] === "ok"}
+        <li class="ok">
+        {else}
+        <li class="err">
+        {/if}
+            {$robotsInfo["data"]}
+        </li>
+
+
+        {if $doctype["status"] != "" || $doctype["status"] != null}
+        <li class="ok">
+        {else}
+        <li class="err">
+        {/if}
+            {$doctype["data"]}
+        </li>
+
+
+        {if $charset["status"] === "ok"}
+        <li class="ok">
+        {else}
+        <li class="err">
+        {/if}
+            {$charset["data"]}
+        </li>
+    
+    </ul>
+
+    <h2>Zdrový kód: {$source}/15 bodů</h2>
+    <ul class="resultBox">
+        {if $validateHtml["status"] === "ok"}
+        <li class="ok"><a href="{$validateHtml["uri"]}">{$validateHtml["data"]}</a>
+        {else}
+        <li class="err"><a href="{$validateHtml["uri"]}">{$validateHtml["data"]}</a> Errors: {$validateHtml["errors"]}, Warnings: {$validateHtml["warnings"]}
+        {/if}
+        </li>
+
+
+        <li class="info">
+            Zdrojový kód má velikost: {$htmlSize} kB.
+        </li>
+
+
+        <li class="info">
+            {$sizeOfJavascript["data"]}.
+            {if $sizeOfJavascript["size"] > 0}
+                Velikost: {$sizeOfJavascript["size"]} kB.
+            {/if}
+        </li>
+
+
+        <li class="info">
+            {$sizeOfCss["data"]}.
+            {if $sizeOfCss["size"] > 0}
+                Velikost: {$sizeOfCss["size"]} kB.
+            {/if}
+        </li>
+
+    </ul>
+
+    <h2>Struktura nadpisů: {$bodyHeadlines}/10 bodů</h2>
+    <ul class="resultBox">
+        {var $last = 0}
+        {foreach $headlinesStruct as $element}
+        <li {if $element["status"] === false}class="err"{/if}>{$element["data"]}</li>
+        {var $last = $element["level"]}
+        {/foreach}
+    </ul>
+
+
+
+    <h2>Doplňující informace: {$othersBody}/20 bodů</h2>
+    <ul class="resultBox">
+        {if $nestedTables === true}
+        <li class="info">Vaše stránka obsahuje vnořené tabulky.</li>
+        {else}
+        <li class="info">Vaše stránka neobsahuje vnořené tabulky.</li>
+        {/if}
+
+
+        {if $altContent === true}
+        <li class="ok">Vaše stránka obsahuje alternativní obsah u všech netextových prvků.</li>
+        {else}
+        <li class="err">Vaše stránka neobsahuje alternativní obsah u všech netextových prvků.</li>
+        {/if}
+
+
+        <li class="info">Text na Vaší stránce zabírá: {$textSize} kB.</li>
+
+        <li class="info">Externí odkazy: {$links["external"]}.</li>
+
+        <li class="info">Interní odkazy: {$links["internal"]}.</li>
+
+        {if $sitemap == "HTTP/1.1 200 OK"}
+            <li class="ok">Stránka obsahuje sitemap.xml.</li>
+        {else}
+            <li class="err">Stránka neobsahuje sitemap.xml.</li>
+        {/if}
+
+    </ul>
+
+    {/if}
+
+
+</div>

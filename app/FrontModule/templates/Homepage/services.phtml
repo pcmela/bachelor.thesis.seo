@@ -1,0 +1,27 @@
+
+{block content}
+
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+
+    <h2>Služby</h2>
+    <table align="center">
+        <tr>
+            <td><a n:href=":Front:Homepage:servicesView"><img src="{$basePath}/images/icon1.png" width="180" height="176" alt="seo" /></a></td>
+        </tr>
+        <tr>
+            <td align="center"><a n:href=":Front:Homepage:seo">SEO</a></td>
+        </tr>
+
+    </table><br />
+    <div class="buttonUi"><a n:href=":Front:Homepage:default">Zpět</a></div>
+</div>

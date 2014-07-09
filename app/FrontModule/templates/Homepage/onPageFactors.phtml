@@ -1,0 +1,27 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+    <h2>Kontrola on-page faktorů</h2>
+    <p>Kontrola on-page faktorů stránky, provede základní kontrolu jednotlivých elementů, které mohou ovlivnit hodnocení vyhledávači na úrovni
+    zdrojového kódu. nástroj je dostupný pro neregistrované a registrovanéí uživatele. Výsledkem analýzy jsou jednotlivé prvky stránky a zda jsou správně nebo špatně.
+    Doplňující informace u výsledku je orientační hodnocení.</p>
+    <h3>Postup (registrovaný uživatel)</h3>
+    <p>Po vstupu do administrace a zvolení SEO modulu, vybereme v levém sidebaru položku zkontrolovat stránku. Do zobrazeného formuláře zadáme doménu stránky
+    a stiskneme Zkontrolovat. Chvíli potrvá analýza stránky a poté budete přesměrování na stránku s výsledky.</p>
+    <h3>Postup (neregistrovaný uživatel)</h3>
+
+    <h3>Náhled výsledku</h3>
+    <img src="{$basePath}/images/hodnoceni_stranky.PNG" alt="náhled výsledku" /><br /><br />
+
+    <div class="buttonUi"><a n:href=":Front:Homepage:seo">Zpět</a></div>
+</div>

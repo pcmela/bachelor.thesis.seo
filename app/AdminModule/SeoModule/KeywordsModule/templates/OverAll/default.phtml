@@ -1,0 +1,26 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+		//$( "a", ".demo" ).click(function() { return false; });
+	});
+    });
+</script>
+<div id="sidebar">
+    <h2 class="style2">Celková analýza</h2>
+</div>
+<br /><br /><br /><br />
+
+    <div class="buttonUi"><a n:href=":Admin:Seo:Keywords:AddKeywords:default, $id">Zpet</a></div>
+{if $editPermission != null}
+    <img src="{plink :Admin:Seo:Keywords:OverAllPrintGraph:default}?type=1&key={$cacheKey}" /><br />
+    <img src="{plink :Admin:Seo:Keywords:OverAllPrintGraph:default}?type=2&key={$cacheKey}" /><br />
+    <img src="{plink :Admin:Seo:Keywords:OverAllPrintGraph:default}?type=3&key={$cacheKey}" /><br />
+    <img src="{plink :Admin:Seo:Keywords:OverAllPrintGraph:default}?type=4&key={$cacheKey}" /><br />
+{else}
+    <p>Nemáte dostatečné oprávnění k prohlížení stránky!</p>
+{/if}

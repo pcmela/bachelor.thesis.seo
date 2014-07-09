@@ -1,0 +1,25 @@
+
+{block content}
+
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+
+    <h2>Služby SEO</h2>
+    <ul>
+        <li><a n:href=":Front:Seo:OnPageFactors:Check:default">Kontrola on-page faktorů stránky</a></li>
+        <li><a n:href=":Front:Seo:Ranks:Check:default">Kontrola ranků stránky</a></li>
+        <li><a n:href=":Front:Seo:SearchEngine:Check:default">Kontrola pozic ve vyhledávačích</a></li>
+    </ul>
+
+    <div class="buttonUi"><a n:href=":Front:Homepage:services">Zpět</a></div>
+
+</div>

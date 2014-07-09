@@ -1,0 +1,149 @@
+{block #content}
+        
+        <script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/seo/table.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+
+	
+	<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+        <script type="text/javascript" src="{$baseUri}/js/function.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        // gridito init
+
+        $(document).ready(function(){
+
+            $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+		//$( "a", ".demo" ).click(function() { return false; });
+            });
+        
+            $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+            // nette ajax init
+            $("a.ajax").live("click", function (event) {
+                //alert(this.href);
+                    event.preventDefault();
+                    $.get(this.href);
+            });
+        });
+
+        </script>
+
+
+
+        <script  type="text/javascript">
+$(document).ready(function(){
+   $("#frmsearchKw-send").click(function(event){
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		$( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+		$( "#dialog-modal" ).dialog({
+			height: 140,
+			modal: true,
+                        closeOnEscape: false,
+                        open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+		});
+	});
+
+        $("#frmaddWordForm-checkAll").click(function(){
+            var checked_status = this.checked;
+            $("input[class=check_word]").each(function(){
+                this.checked = checked_status;
+            });
+        });
+
+        $("#frm-dataForm").submit(function(event){
+            var content = "";
+            $("input[class=check_word_seznam]").each(function(){
+                if(this.checked){
+                    content += $("label[for='" + $(this).attr('id') + "']").text() + ",";
+                }
+            });
+            
+            //event.preventDefault();
+            var p = document.forms['frm-dataForm'];
+            var location = {link sig!} + '&param='+content + '&engine=seznam&web=' + p['web_seznam'].value;
+         
+            $.get(location);
+
+            return false;
+
+        });
+
+
+        $("#frm-googleForm").submit(function(event){
+            var content = "";
+
+            $("input[class=check_word_google]").each(function(){
+                if(this.checked){
+                    //alert($(this).attr('id'));
+                    content += $("label[for='" + $(this).attr('id') + "']").text() + ",";
+                }
+            });
+
+            var p = document.forms['frm-googleForm'];
+            window.location = {link sig!} + '&param='+content + '&engine=google&web=' + p['web_google'].value;
+            //$(location).attr('href',window.location+'/?do=Sig');
+
+            return false;
+
+        });
+
+
+
+ });
+</script>
+        
+<!-- Main -->
+        <div id="content">
+            {if $editPermission !== null}
+            <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+            <div class="buttonUi"><a href="{plink :Admin:Seo:Keywords:AddKeywords:default, $id}">Zpět</a></div>
+            {if $countData > 0}
+                <h2>Možná konkurence</h2>
+                {control dataForm begin}
+                {control dataForm errors}
+                {var form => $control['dataForm']}
+                {var counterSeznam => 1}
+                {foreach $dataResults as $key => $value}
+
+                {if $iterator->isFirst()}
+                    <table>
+                        <thead><tr><th scope="col"></th><th scope="col">Slovo</th><th scope="col">Přidat</th></tr></thead>
+                        <tbody>
+                {/if}
+                {if !in_array($value, $currentWebs)}
+                                <tr {if $counterSeznam % 2 === 0}class="odd"{/if}><td>{$counterSeznam}</td><td>{$form['name'.$key]->label}</td><td>{$form['name'.$key]->control}</td><tr>
+
+                {var counterSeznam++}
+                {/if}
+
+                {if $iterator->isLast()}
+                                <tr><td></td><td></td><td>{$form['submit']->control}</td><tr>
+                        </tbody>
+                   </table>
+                {/if}
+
+                {/foreach}
+                {control dataForm end}
+
+                <div class="buttonUi"><a href="{plink :Admin:Seo:Keywords:AddKeywords:default, $id}">Zpět</a></div>
+            {else}
+                <p>Bohužel nebyla nalezena žádná dostupná konkurence</p>
+            {/if}
+            {else}
+                <p>Nemáte práva pro prohlížení stránky!</p>
+            {/if}
+        </div>
+
+<!-- End Main -->

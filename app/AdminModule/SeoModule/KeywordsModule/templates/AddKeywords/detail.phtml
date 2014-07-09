@@ -1,0 +1,30 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+    $(document).ready(function(){
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+		//$( "a", ".demo" ).click(function() { return false; });
+	});
+    });
+</script>
+<div id="sidebar">
+    <h2 class="style2">Detail</h2>
+</div>
+<br /><br /><br /><br />
+    <div class="buttonUi"><a n:href="default, $id">Zpet</a></div>
+{if $editPermission !== null}
+    {if $data}
+        {foreach $url as $result}
+        <img src="{plink :Admin:Seo:Keywords:PrintGraph:default}?engineId={$result->getEngineId()}&lastPosition={$result->getLastPosition()}&word={$result->getWord()}&webName={$result->getWebName()}&engineName={$result->getName()}" alt="Graf: {$result->getName()}" /><br />
+        {/foreach}
+        <p>Poznámka: Grafy jsou generovány pouze pro vyhledávače, pro které je dostatek dostupných dat v naší databázi!</p>
+    {else}
+        <p>{$message}</p>
+    {/if}
+        <div class="buttonUi"><a n:href="default, $id">Zpet</a></div>
+{else}
+    <p>Nemáte práva pro prohlížení stránky!</p>
+{/if}

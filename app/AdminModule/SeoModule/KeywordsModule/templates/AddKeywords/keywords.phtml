@@ -1,0 +1,62 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/seo/table.css" rel="stylesheet" type="text/css" media="all" />
+
+        <script  type="text/javascript">
+        $(document).ready(function(){
+            $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+		//$( "a", ".demo" ).click(function() { return false; });
+            });
+        });
+        </script>
+<div id="content">
+
+
+<div class="buttonUi">
+            <a href="{plink :Admin:Seo:Keywords:AddKeywords:default, $id}" >Zpět</a>
+        </div><br />
+{if $editPermission != null}
+<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+{control kwPoints begin}
+{control kwPoints errors}
+{var form => $control['kwPoints']}
+<table>
+    {foreach $kw as $value}
+    {var jsId => "frmkwPoints-".$value->word_id."_"}
+    {var jsIdSharp => "#frmkwPoints-".$value->word_id."_"}
+    <script type="text/javascript">
+    $(function() {
+		var select = $( {$jsIdSharp} );
+		var slider = $( "<div id='slider'></div>" ).insertAfter( select ).slider({
+			min: 1,
+			max: 10,
+			range: "min",
+			value: select[ 0 ].selectedIndex + 1,
+			slide: function( event, ui ) {
+				select[ 0 ].selectedIndex = ui.value - 1;
+			}
+		});
+		$( {$jsIdSharp} ).change(function() {
+			slider.slider( "value", this.selectedIndex + 1 );
+		});
+	});
+    </script>
+        <tr><td>
+            {$form[$value->word_id]->label}
+            </td><td width="250">
+            {$form[$value->word_id]->control}
+
+       
+    {/foreach}
+                </td></tr><tr><td></td><td>{$form['submit']->control}</td></tr>
+</table>
+{control kwPoints end}
+{else}
+    <p>Nemáte oprávnění k prohlížení stránky!</p>
+{/if}
+
+
+</div>

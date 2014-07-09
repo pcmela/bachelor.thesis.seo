@@ -1,0 +1,20 @@
+{block #content}
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#frm-registraceForm").submit(function(event) {
+            $(".rules").text("");            
+        });
+    });
+</script>
+
+<div id="content">
+    <h2 class="style1">Registrace uživatele</h2>
+<h3>Zaregistrováním získáváte větší možnosti.</h3>
+
+<div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+<div class="rules"></div>
+    {control registraceForm}
+</div>
+
+<!-- End Main -->

@@ -1,0 +1,29 @@
+{block #content}
+
+
+<!-- Main -->
+<div id="content">
+{control rankyForm}
+
+{if isset($url)}
+    Url: {$url}<br /><br />
+    <h2>Ranky</h2>
+    <ul class="resultBox">
+        Srank: {$srank}<br />
+        PR: {$pagerank}<br />
+        AlexaRank: {$alexaRank}<br />
+    </ul>
+
+<br />
+<h2>Backlinks</h2>
+Odkazujici stranky Alexa: {$blAlexa}<br />
+Backlinks Google: {$blGoogle}<br />
+Index pages Seznam: {$ipSeznam}<br />
+Oblibenost stranky Seznam: {$olSeznam}<br />
+Index pages Bing: {$ipBing}<br />
+Index pages Alexa widget: {$ipYahoo}<br />
+                                {/if}
+
+<a href="{link :Admin:Homepage:default}">Zpet</a>
+</div>
+<!-- End Main -->

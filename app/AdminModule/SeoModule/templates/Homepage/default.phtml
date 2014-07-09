@@ -1,0 +1,77 @@
+{block #content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+	<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+        
+
+<script type="text/javascript">
+	// gridito init
+
+        $(document).ready(function(){
+
+            $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+            
+            $('#submit_signal').click(function(){
+                //alert('a');
+                event.preventDefault();
+                $.get({link Sig!});
+            })
+
+            $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+            // nette ajax init
+            $("a.ajax").live("click", function (event) {
+                //alert(this.href);
+                    event.preventDefault();
+                    $.get(this.href);
+            });
+        });
+
+	</script>
+<!-- Main -->
+<div id="content">
+    <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+    <h2>Vaše webové stránky:</h2>
+			
+                            {if isset($webs)}
+                                {if $webs->count > 0}
+                                    
+                                    {control myWebGrid}
+                                {else}
+                                    Nemáte zatím žádné webové stránky.<br />
+                                {/if}
+                            {/if}
+    <br /><br />
+    <h2>Jste spoluvlastníkem stránek</h2>
+                            {if isset($co_ownerWebs)}
+                                {if $co_ownerWebs->count > 0}
+                                    
+                                    {control coOwnerWebGrid}
+                                {else}
+                                    Nejste spoluvlastníkem žádné jiné stránky.<br />
+                                {/if}
+                            {/if}
+
+   <br /><br />
+   <h2>Můžete prohlížet statistiky stránek</h2>
+                            {if isset($viewWebs)}
+                                {if count($viewWebs) > 0}
+                                    {control viewerWebGrid}
+                                {else}
+                                    Nemůžete prohlížet žádné jiné další stránky.<br />
+                                {/if}
+                            {/if}
+
+</div>
+
+<!-- End Main -->

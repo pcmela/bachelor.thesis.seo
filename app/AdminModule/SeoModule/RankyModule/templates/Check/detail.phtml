@@ -1,0 +1,45 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+    $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	});
+</script>
+{if $submit}
+<div id="content">
+    <div class="buttonUi"><a n:href=":Admin:Seo:Ranky:Check:default">Zpět</a></div>
+    <h3>Ranky:</h3>
+    <ul class="resultBox">
+        <li class="info">PageRank: {$pageRank}/10</li>
+        <li class="info">SRank: {$sRank}</li>
+        <li class="info">AlexaRank: {$alexaRank}</li>
+    </ul><br />
+
+    <h3>Zpětné odkazy:</h3>
+    <ul class="resultBox">
+        <li class="info">Zpětné odkazy na stránku: {$backlinks}</li>
+    </ul><br />
+
+    <h3>Popularita webu:</h3>
+    <ul class="resultBox">
+        <li class="info">Seznam: {$seznamPopularity}</li>
+        <li class="info">Google: {$googlePopularity}</li>
+        <li class="info">Bing: {$bingPopularity}</li>
+    </ul><br />
+
+    <h3>Indexované stránky webu:</h3>
+    <ul class="resultBox">
+        <li class="info">Seznam: {$seznamIndexPages}</li>
+        <li class="info">Google: {$googleIndexPages}</li>
+        <li class="info">Bing: {$bingIndexPages}</li>
+    </ul><br />
+
+    <h3>Ostatní:</h3>
+    <ul class="resultBox">
+
+        <li class="info">Počet záznamů na wikipedia.org: {$wikiBackLinks}</li>
+    </ul><br />
+    {/if}
+</div>

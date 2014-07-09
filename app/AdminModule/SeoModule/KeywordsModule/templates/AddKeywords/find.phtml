@@ -1,0 +1,181 @@
+{block #content}
+        
+        <script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/seo/table.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+
+	
+	<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+        <script type="text/javascript" src="{$baseUri}/js/function.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        // gridito init
+
+        $(document).ready(function(){
+            
+        
+            $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+            // nette ajax init
+            $("a.ajax").live("click", function (event) {
+                //alert(this.href);
+                    event.preventDefault();
+                    $.get(this.href);
+            });
+
+            $("#frm-addWordForm").submit(function(event){
+                var checked_status = this.checked;
+                var content = "";
+
+                $("input[class=check_word]").each(function(){
+
+                    if(this.checked){
+                        //alert($(this).attr('id'));
+                        content += $("label[for='" + $(this).attr('id') + "']").text() + ",";
+                    }
+                });
+
+                if(content !== ""){
+                    $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+                    $( "#dialog-modal" ).dialog({
+                        height: 140,
+                        modal: true,
+                        closeOnEscape: false,
+                        open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+                    });
+                    var p = document.forms['form_keywords'];
+
+                    $.get("?do=update", { webId: p['url'].value, words: content } );
+
+                }
+                return false;
+
+            });
+
+
+        });
+
+
+        </script>
+
+<style type="text/css">
+    #dialog-modal{
+        display: none;
+    }
+</style>
+
+<script  type="text/javascript">
+$(document).ready(function(){
+   $("#frmsearchKw-send").click(function(event){
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+		$( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+		$( "#dialog-modal" ).dialog({
+			height: 140,
+			modal: true,
+                        closeOnEscape: false,
+                        open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+		});
+	});
+ });
+</script>
+
+
+<style type="text/css">
+    #dialog-modal{
+        display: none;
+    }
+</style>
+
+<script  type="text/javascript">
+$(document).ready(function(){
+   $("#frm-keywordsForm").submit(function(event){
+                $(".rules").text("");
+		// a workaround for a flaw in the demo system (http://dev.jqueryui.com/ticket/4375), ignore!
+                var p = document.forms['frm-keywordsForm'];
+                if(p['frmkeywordsForm-word'].value != ""){
+                    $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+                    $( "#dialog-modal" ).dialog({
+                            height: 140,
+                            modal: true,
+                            closeOnEscape: false,
+                            open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+                    });
+                }
+	});
+
+        $("#frmaddWordForm-checkAll").click(function(){
+            var checked_status = this.checked;
+            $("input[class=check_word]").each(function(){
+                this.checked = checked_status;
+            });
+        });
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+		//$( "a", ".demo" ).click(function() { return false; });
+	});
+
+        
+ });
+</script>
+
+<div id="dialog-modal" title="Pozadavek se zpracovava">
+	<p>Pockejte prosim, probiha zpracovani dat.</p>
+</div>
+
+
+
+
+
+{if $editPermission !== null}
+<!-- Main -->
+        <div id="content">
+            <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+            <div class="buttonUi"><a href="{plink :Admin:Seo:Keywords:AddKeywords:default, $id}">Zpět</a></div>
+            {if $id !== null}
+                <div class="rules"></div>
+                {control keywordsForm}
+                {if count($similiarWords) > 0}
+                {control addWordForm begin}
+                {control addWordForm errors}
+                {var form => $control['addWordForm']}
+                    <table>
+                        <thead><tr><th scope="col"></th><th scope="col">Slovo</th><th scope="col">{$form['checkAll']->control}</th></tr></thead>
+                        <tbody>
+                    {foreach $similiarWords as $key => $word}
+                        {var $count => $iterator->getCounter() - 1}
+                        <tr {if $iterator->isEven()}class="odd"{/if}><td>{$iterator->getCounter()}</td><td>{$form['name'.$key]->label}</td><td>{$form['name'.$key]->control}</td><tr>
+                    {/foreach}
+                        <tr><td></td><td></td><td>{$form['submitWords']->control}</td><tr>
+                        </tbody>
+                    </table>
+                    {control addWordForm end}
+                {/if}
+            {else}
+                <h1>Stránka nenalezena!</h1>
+            {/if}
+            <div class="buttonUi">
+                <a href="{link default, $id}" >Zpet</a>
+            </div>
+        </div>
+{else}
+        <div id="content">
+            <div class="buttonUi"><a href="{plink :Admin:Seo:Homepage:default}">Zpět</a></div>
+            <p>Nemáte práva pro prohlížení stránky!</p>
+        </div>
+{/if}
+<!-- End Main -->

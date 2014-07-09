@@ -1,0 +1,41 @@
+{block #content}
+
+<!-- Main -->
+        <script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+        <script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+
+	<script type="text/javascript" src="{$baseUri}/js/jquery.nette.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+
+
+
+
+	<script type="text/javascript">
+	// gridito init
+	$("div.gridito").livequery(function () {
+		$(this).gridito();
+	});
+
+	// nette ajax init
+	$("a.ajax").live("click", function (event) {
+		event.preventDefault();
+		$.get(this.href);
+	});
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	});
+	</script>
+
+
+
+<div id="content">
+    <div n:foreach="$flashes as $flash" class="flash {$flash->type}">{$flash->message}</div>
+    <div class="buttonUi"><a href="{link default}">Zpet</a></div><br />
+    {control grid}
+</div>
+<!-- End Main -->

@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>ELPOD</title>
+<meta name="keywords" content="" />
+<meta name="description" content="" />
+<link href="{$baseUri}/css/default.css" rel="stylesheet" type="text/css" media="all" />
+<link href="{$baseUri}/css/slider/style.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-1.4.4.min.js"></script>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.5.3/jquery-ui.min.js" ></script>
+<script type="text/javascript" src="{$baseUri}/js/jquery.nette.js"></script>
+<style type="text/css">
+@import "layout.css";
+</style>
+</head>
+<body>
+
+    <script>
+    $(document).ready(function(){
+        $("#featured > ul").tabs({ fx:{ opacity: "toggle" }}).tabs("rotate", 5000, true);
+    });
+
+    </script>
+<div id="header">        
+	<div id="logo">
+            <h1><a n:href=":Front:Homepage:default"><img src="{$basePath}/images/elpod.png" />ELPOD</a></h1>
+	</div>
+        {if !$isLogged}
+        <div id="login">
+        {control login begin}
+        
+        {var form => $control['login']}
+        <table>
+            <tr class="required">
+                    <th>{$form['email']->label}</th>
+
+                    <td>{$form['email']->control}</td>
+            </tr>
+
+            <tr class="required">
+                    <th>{$form['password']->label}</th>
+
+                    <td>{$form['password']->control}</td>
+            </tr>
+            <tr>
+                    <th>&nbsp;</th>
+
+                    <td>{$form['login']->control}</td>
+            </tr> 
+        </table>
+        {control login errors}
+        {control login end}
+        </div>
+        {else}
+        <div id="login">
+            <p>Jste přihlášen.</p><p><a n:href=":Admin:Homepage:default">Vstup do administrace</a></p>
+            <p><a n:href="logout!">Odhlásit</a></p>
+        </div>
+        {/if}
+	<div id="menu">
+            
+		<ul>
+			<li class="first"><a n:href=":Front:Homepage:products" accesskey="1" title="">Produkty</a></li>
+			<li><a n:href=":Front:Homepage:services" accesskey="2" title="">Služby</a></li>
+			
+			<li><a n:href=":Front:Homepage:onas" accesskey="5" title="">O nás</a></li>
+                        <li><a n:href="Registrace:Registrace:default">Zaregistrujte se</a></li>
+		</ul>
+	</div>
+</div>
+<!-- end #header -->
+<div id="page">
+	<div id="content">
+
+
+            <div id="featured" >
+		  <ul class="ui-tabs-nav">
+	        <li class="ui-tabs-nav-item ui-tabs-selected" id="nav-fragment-1"><a href="#fragment-1"><span>Data přehledně zobrazena pomocí grafů</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-2"><a href="#fragment-2"><span>Interaktivní tabulky pomocí AJAXu</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-3"><a href="#fragment-3"><span>Kontrola ranků</span></a></li>
+	        <li class="ui-tabs-nav-item" id="nav-fragment-4"><a href="#fragment-4"><span>Kontrola on-page faktorů</span></a></li>
+	      </ul>
+
+	    <!-- First Content -->
+	    <div id="fragment-1" class="ui-tabs-panel" style="">
+                <img width="400" height="180" src="{$basePath}/images/homepageImg1.PNG" alt="Graph 1" />
+			 <div class="info" >
+				<h2><a href="#" >Data přehledně zobrazena pomocí grafů</a></h2>
+				<p>Jednotlivé testy jsou ukládany do databáze a lze data zobrazovat přehledně pomocí grafů</p>
+			 </div>
+	    </div>
+
+	    <!-- Second Content -->
+	    <div id="fragment-2" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img width="400" height="180" src="{$basePath}/images/homepageImg2.PNG" alt="DataGrid" />
+			 <div class="info" >
+				<h2><a href="#" >Interaktivní tabulky pomocí AJAXu</a></h2>
+				<p>Například klíčová slova jednotlivých internetových stránek jsou zobrazena v tabulce se stránkováním</p>
+			 </div>
+	    </div>
+
+	    <!-- Third Content -->
+	    <div id="fragment-3" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img width="400" height="180" src="{$basePath}/images/ranky.PNG" alt="" />
+			 <div class="info" >
+				<h2><a href="#" >Kontrola ranků</a></h2>
+				<p>Kontrola Google Page rank, Seznam rank, Alexa rank, zpětných odkazů, počtu indexovaných stránek ve vyhledávačích a další.</p>
+	         </div>
+	    </div>
+
+	    <!-- Fourth Content -->
+	    <div id="fragment-4" class="ui-tabs-panel ui-tabs-hide" style="">
+			<img width="400" height="180" src="{$basePath}/images/on-page.PNG" alt="" />
+			 <div class="info" >
+				<h2><a href="#" >Kontrola on-page faktorů</a></h2>
+				<p>Kontrola on-page faktorů stránky (validita zdrojového kódu, struktura nadpisů, vyplnění hlavičkek dokumentu aj.)</p>
+	         </div>
+	    </div>
+
+		</div>
+
+
+		
+		<h2 class="style1">Nástroje pro usnadnění Vašeho podnikání!</h2>
+		<h3>SEO, SEM, validace stránek a jiné.</h3><br />
+		<img src="images/icon3.PNG" alt="" width="115" height="115" class="alignleft" />
+                <p>Nástroje, které Vám nabízíme v rámci tohoto projektu Vám usnadní podnikání v prostředí internetu. Můžete zde naleznout nástroje pro správu klíčových slov Vaší stránky, kontrolu pozic ve vyhledávačích, nástroj pro validaci stránek a mnoho jiného.
+                Pro využíváí všech nástrojů Vám stačí pouze jedna registrace a jeden uživatelský účet! Registrace je zcela zdarma.</p>
+
+	</div>
+	<!-- end #content -->
+	<div id="sidebar">
+		<h2 class="style2">SEO nástroje</h2>
+		<img src="images/homepage10.jpg" alt="" width="95" height="113" class="alignleft nopad" />
+		<p>Nástroj pro validaci internetových stránek pro účely SEO a SEM.</p>
+		<p class="more"><a n:href=":Front:Homepage:seo">Více zde</a></p>
+		
+	</div>
+	<!-- end #sidebar -->
+	<div style="clear: both;">&nbsp;</div>
+</div>
+
+
+    <div id="box2">
+	<div class="wrapper"> <img src="images/icon1.PNG" alt="" width="115" height="115" class="alignleft" />
+		<h2>Nástroje</h2>
+		<h3>Tento projekt Vám nabízí nástroje:</h3>
+		<p>Nástroj pro validaci internetových stránek pro účely SEO a SEM. Nástroj nabízí funkce jako je kontrola pozic ve vyhledávačích, validace stránek, kontrola ranků, napovídání konkurence a klíčových slov a spoustu dalších užitečných funkcí. <a n:href=":Front:Homepage:seo">Více zde.</a></p>
+	</div>
+</div>
+
+<!-- end #box2 -->
+<div id="footer">
+    <p>Nástroj pro usnadnění Vašeho podnikání.</p>
+</div>
+<!-- end #footer -->
+</body>
+</html>

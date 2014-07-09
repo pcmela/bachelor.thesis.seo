@@ -1,0 +1,28 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+	
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+    <h2>Kontrola pozic ve vyhledávačích</h2>
+    <p>Kontrola pozic je dostupná pro neregistrované uživatele a registrované uživatele. Tento nástroj Vám dokáže ušetřit spoustu času. Namísto pracného
+    procházení všech vyhledávačů to za Vás tento nástroj udělá automaticky!</p>
+    <h3>Postup (registrovaný uživatel)</h3>
+    <p>Při prvním vstupu do administračního rozhraní je nutné jako první krok zvolit nástroj SEO a přidat internetovou stránku (přidat stránku).
+    Po tomto kroku se Vám stránka zobrazí v úvodním výpisu a rozkliknete detail stránky. Klíčová slova se nemusí přidávat po jednom ale lze jich
+    přidat i více najednou (každé klíčové slovo na samostatném řádku - oddělené klávesou enter!).</p>
+    <img width="570" height="260" src="{$basePath}/images/homepageImg2.PNG" alt="přehled klíčových slov" />
+    <p>Průběh jednotlivých pozic lze sledovat pomocí přehledného grafu, kde jsou zakresleny pozice na Y-nové ose a na X-ové ose se naléza čas testování.</p>
+    <img width="570" height="200" src="{$basePath}/images/graf-pozic.PNG" alt="graf pozic" /><br />
+
+    <h3>Postup (neregistrovaný uživatel)</h3>
+
+    <div class="buttonUi"><a n:href=":Front:Homepage:seo">Zpět</a></div>
+</div>

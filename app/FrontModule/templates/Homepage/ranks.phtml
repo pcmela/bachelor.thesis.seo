@@ -1,0 +1,27 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+    <h2>Zjišťování ranků stránky</h2>
+    <p>Funkce na zjištění základních ranků stránky Vám odhalí hodnocení Vaší stránky vyhledávači. Funkce provede zjištění nejznámějších ranků jako je
+    Google Page Rank, Seznam Rank, Alexa rank, indexované stránky vyhledávači aj. Funkce je dostupná pro registrované i pro neregistrované uživatele.</p>
+
+    <h3>Postup (registrovaný uživatel)</h3>
+    <p>Při kontrole po přihlášení se data ukládají do databáze a je tak možné prohlížet si historii jednotlivých testů, které jsou přehledně zobrazeny
+    pomocí grafů. Po přihlášení a rozkliknutí modulu SEO klikneme na položku Kontrola ranů v levém postraním panelu.</p>
+    <img alt="prehled" src="{$basePath}/images/ranky_prehled.PNG" />
+    <p>Po rozkliknutí nabídky se zobrazí seznam
+    Vámi přidaných internetových stránek u kterých je možné prohlížet poslední test detailně nebo historii.</p>
+    <img alt="prehled" src="{$basePath}/images/ranky_detail.PNG" width="500" height="400"/>
+    <h3>Postup (neregistrovany)</h3>
+    <div class="buttonUi"><a n:href=":Front:Homepage:seo">Zpět</a></div>
+</div>

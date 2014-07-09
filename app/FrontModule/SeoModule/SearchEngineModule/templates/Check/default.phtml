@@ -1,0 +1,87 @@
+
+{block content}
+
+<script type="text/javascript">
+
+$(document).ready(function(){
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	});
+
+});
+</script>
+
+<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+<script type="text/javascript" src="{$baseUri}/js/validation.js"></script>
+        <script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+
+	<script type="text/javascript" src="{$baseUri}/js/jquery.nette.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+
+
+
+
+	<script type="text/javascript">
+	// gridito init
+	$("div.gridito").livequery(function () {
+		$(this).gridito();
+	});
+
+	// nette ajax init
+	$("a.ajax").live("click", function (event) {
+		event.preventDefault();
+		$.get(this.href);
+	});
+
+ 
+	</script>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#frm-checkKeywordsForm").submit(function(event) {
+            $(".rules").text("");
+            var p = document.forms['frm-checkKeywordsForm'];
+            if(validate(p['frmcheckKeywordsForm-domain'].value)){
+                
+                if(p['frmcheckKeywordsForm-keywords'].value != ""){
+                    $( "#dialog:ui-dialog" ).dialog( "destroy" );
+
+                    $( "#dialog-modal" ).dialog({
+                            height: 140,
+                            modal: true,
+                            closeOnEscape: false,
+                            open: function(event, ui) { $(".ui-dialog-titlebar-close").hide(); }
+
+                    });
+                }
+            }
+
+            
+        });
+    });
+</script>
+
+<div id="dialog-modal" title="Požadavek se zpracovává">
+	<p>Počkejte prosím, probíhá zpracování dat.</p>
+</div>
+
+<style type="text/css">
+    #dialog-modal{
+        display: none;
+    }
+</style>
+
+<div id="content">
+    <div class="buttonUi"><a n:href=":Front:Homepage:servicesView">Zpět</a></div>
+    <div class="rules"></div>
+    {control checkKeywordsForm}
+
+    {if $grid}
+        {control grid}
+    {/if}
+        
+</div>

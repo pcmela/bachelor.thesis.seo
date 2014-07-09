@@ -1,0 +1,26 @@
+
+{block content}
+<script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+<link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+
+
+        $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+	})
+</script>
+
+<div id="content">
+    <h2>Napovídání klíčových slov</h2>
+    <p>Napovídání klíčových slov slouží pro nalezení nových slov, které by mohly být užitečné při budování long tailu stránky. Tento nástroj je
+        k dispozici pouze registrovaným uživatelům.</p>
+    <h3>Postup</h3>
+    <p>Uživatel musí bát zaregistrovaný a musí mít přidanou internetovou stárnku u svého účtu. Po rozkliknutí detailu stránky nalezeneme napovídání
+    klíčových slov pod tlačítkem - Klíčová slova. Objeví se formulář, do kterého zadáme klíčové slovo a potvrdíme tlačítkem najít. Na stránce, která se
+    zobrazí je k dispozici výpis jednotlivých doporučených příbuzných slov.</p>
+    <img src="{$basePath}/images/klicove_slova_img.PNG" alt="klíčové slova" /><br /><br />
+    <p>Pokud chceme klíčové slovo přidat ke stránce zaklikneme check-button a potvrdíme tlačítkem potrvdit. Lze přidávat jednom nebo až všechny zobrazené
+    klíčové slova. Pro zaclicknutí všech klíčových slov slouží check-button v záhlaví tabulky.</p>
+
+    <div class="buttonUi"><a n:href=":Front:Homepage:seo">Zpět</a></div>
+</div>

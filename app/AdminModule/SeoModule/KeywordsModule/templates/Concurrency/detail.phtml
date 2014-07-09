@@ -1,0 +1,60 @@
+
+{block #content}
+
+        <script type="text/javascript" src="{$baseUri}/js/jquery/jquery-ui-1.8.9.custom.min.js"></script>
+        <link href="{$baseUri}/css/jquery/jquery-ui-1.8.9.custom.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/seo/table.css" rel="stylesheet" type="text/css" media="all" />
+        <link href="{$baseUri}/css/gridito.css" rel="stylesheet" type="text/css" media="all" />
+
+
+
+	<script type="text/javascript" src="{$baseUri}/js/jquery.livequery.js"></script>
+	<script type="text/javascript" src="{$baseUri}/js/jquery.ui.gridito.js"></script>
+        <script type="text/javascript" src="{$baseUri}/js/function.js"></script>
+
+
+
+
+        <script type="text/javascript">
+        // gridito init
+
+        $(document).ready(function(){
+
+
+            $(function() {
+		$( "button, input:submit, a", ".buttonUi" ).button();
+		//$( "a", ".demo" ).click(function() { return false; });
+            });
+
+            $("div.gridito").livequery(function () {
+                    $(this).gridito();
+            });
+
+            // nette ajax init
+            $("a.ajax").live("click", function (event) {
+                //alert(this.href);
+                    event.preventDefault();
+                    $.get(this.href);
+            });
+        });
+
+        </script>
+
+<style type="text/css">
+    #dialog-modal{
+        display: none;
+    }
+</style>
+
+<!-- Main -->
+        <div id="content">
+            {if $editPermission !== null}
+            {control grid}
+            {control addWeb}
+            <div class="buttonUi"><a href="{plink :Admin:Seo:Keywords:AddKeywords:default, $id}">Zpět</a></div>
+            {else}
+                <p>Nemáte práva pro prohlížení stránky!</p>
+            {/if}
+        </div>
+
+<!-- End Main -->

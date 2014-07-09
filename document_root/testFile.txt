@@ -1,0 +1,840 @@
+<body id="hledani-seznam-cz">
+    <div class="czech" id="page">
+      <div id="head">
+        <div id="line">
+          <div id="tabs">
+            <h2 class="blind">Služby</h2>
+            <ul>
+              <li class="active">
+                <a href="/" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'internet'});">Internet</a>
+              </li>
+              <li>
+                <a href="http://www.firmy.cz/phr/centrum" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'firmy'});">Firmy</a>
+              </li>
+              <li>
+                <a href="http://www.mapy.cz/#st=s@ssq=centrum" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'mapy'});">Mapy</a>
+              </li>
+              <li>
+                <a href="http://slovnik.seznam.cz/?q=centrum" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'slovnik'});">Slovník</a>
+              </li>
+              <li>
+                <a href="http://www.zbozi.cz/?q=centrum" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'zbozi'});">Zboží</a>
+              </li>
+              <li>
+                <a href="http://www.obrazky.cz/?q=centrum" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'obrazky'});">Obrázky</a>
+              </li>
+              <li>
+                <a href="http://encyklopedie.seznam.cz/search?q=centrum" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'enc'});">Encyklopedie</a>
+              </li>
+            </ul>
+          </div>
+          <hr class="blind"/>
+          <p id="login">
+            <a href="http://www.seznam.cz">Seznam</a>
+          </p>
+        </div>
+        <h1>
+        <a accesskey="2" href="http://www.seznam.cz" title="Seznam.cz">
+        <img alt="Seznam.cz" src="/img/fulltext-logo-small.png"/>
+        </a></h1>
+        <p class="blind">
+        <a accesskey="1" href="http://www.ippi.cz/klavesove-zkratky/neni-mapa-stranek.html">Klávesové
+        zkratky na tomto webu - rozšířené</a>
+        <br/>
+         
+        <a href="/?q=centrum&amp;mod=f&amp;blindFriendly=1&amp;sId=k0UYvnldwwD4VXTdMdmB">Přístupné
+        výsledky hledání "
+        <strong>centrum</strong>"</a>
+        <br/>
+         
+        <a accesskey="0" href="#vysledky">Na obsah
+        stránky</a></p>
+        <div class="searchForm" id="topSearch">
+          <form action="/" method="get">
+          <label class="blind" for="q">Hledej:</label> 
+          <input accesskey="4" class="text" id="q" name="q" type="text" value="centrum"/>
+           
+          <input name="sId" type="hidden" value="k0UYvnldwwD4VXTdMdmB"/>
+           
+          <span class="bf-switch blind">
+          <input class="bf" id="bf" name="blindFriendly" type="checkbox" value="1"/>
+           
+          <label for="bf">přístupná
+          verze</label></span> 
+          <input class="submit" type="submit" value="Vyhledat Seznamem"/>
+           
+          <input id="sourceid" name="sourceid" type="hidden" value="top"/>
+           
+          <input id="thru" name="thru" type="hidden" value=""/>
+          </form>
+          <div class="link">
+            <a href="/pokrocile?q=centrum&amp;sId=k0UYvnldwwD4VXTdMdmB">Pokročilé
+            hledání »</a>
+          </div>
+          <ul id="switch">
+            <li class="active">
+              <a href="/?q=centrum&amp;sId=k0UYvnldwwD4VXTdMdmB" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'hledani-cesky'});">Česky</a>
+            </li>
+            <li>
+              <a href="/svet?q=centrum&amp;sId=k0UYvnldwwD4VXTdMdmB" onmousedown="return JAK.FCLogger.log('other', {n:'tab', id: 'hledani-cizojazycne'});">Ve
+              světě</a>
+            </li>
+          </ul>
+          <hr class="blind"/>
+<script type="text/javascript" xml:space="preserve">
+ var sg = new JAK.Suggest("q", "/suggest/",
+{dict: "fulltext", limit: 10});
+JAK.signals.addListener(false, "suggestSubmit",
+function(e) { var used = e.target.used(); if (used == 2) {
+JAK.gel("thru").value = "sug"; } else if (used
+== 1) { JAK.gel("thru").value = "sugpart"; }
+}); 
+          </script>
+        </div>
+      </div>
+      <hr/>
+      <div id="container">
+      <div id="column">
+        <div id="columnIn">
+          <div class="sklik" id="sklikRight">
+          <span class="sklik-block-title">
+            <a href="http://www.sklik.cz/">Reklama Sklik:</a>
+          </span> 
+          <div class="creative">
+          <span class="sklik-title">
+            <a href="http://out.sklik.cz/click?c=283WGAT8MEQ52P64NI2HD5KXZCK7RKMCMV6AY9KRRHMWWMV83RY39D4VSXAK6QZHEE3PC9CNEFIJ63EPZRTI4AJQK9UY4JIXZKDJ624M7VHWTKMFMYZF4SH9SGDT2EF3WNXCJJRVY8WH59A4XU2ITXVVUBS8AGGDERFU8WH5RM3TZG8CHRJX5CWP66I3YEJAYHCWSZQECE6KH3Y4NGNDQFY8K53VVSSBIJJEH35RHGISMCICSPXWQRUNBVXHQNFPNSHKD5I3V54X85832IVB4IPCFYM7WCRM7FYYZ2FTVH3IQ42Q74WV3M4WCPPGCRWDWI9FGDAY8EWGYY2" onmousedown="return JAK.FCLogger.log('sklik', {l:'right', x: 'title'}, '1', 'www.businessinstitut.cz');">Prestižní
+            studium MBA</a>
+          </span> 
+          <span class="sklik-descr1">Moderní forma studia
+          eLearning,</span> 
+          <span class="sklik-descr2">cena za studium 98.000, -
+          Kč.</span> 
+          <span class="sklik-url">
+            <a href="http://out.sklik.cz/click?c=283WGAT8MEQ52P64NI2HD5KXZCK7RKMCMV6AY9KRRHMWWMV83RY39D4VSXAK6QZHEE3PC9CNEFIJ63EPZRTI4AJQK9UY4JIXZKDJ624M7VHWTKMFMYZF4SH9SGDT2EF3WNXCJJRVY8WH59A4XU2ITXVVUBS8AGGDERFU8WH5RM3TZG8CHRJX5CWP66I3YEJAYHCWSZQECE6KH3Y4NGNDQFY8K53VVSSBIJJEH35RHGISMCICSPXWQRUNBVXHQNFPNSHKD5I3V54X85832IVB4IPCFYM7WCRM7FYYZ2FTVH3IQ42Q74WV3M4WCPPGCRWDWI9FGDAY8EWGYY2" onmousedown="return JAK.FCLogger.log('sklik', {l:'right', x: 'url'}, '1', 'www.businessinstitut.cz');">www.businessinstitut.cz</a>
+          </span></div></div>
+          <p class="advert">
+            <a href="http://www.sklik.cz">Zde může
+            být zobrazena
+            vaše reklama »</a>
+          </p>
+        </div>
+      </div>
+<script type="text/javascript" xml:space="preserve">
+ var sklikPremiseNums = []; 
+      </script> 
+      <div id="results">
+      <a id="vysledky" name="vysledky"/> 
+      <h2 class="blind">Výsledky hledání</h2>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'7186', x:'pict'}, 1, 'http://www.centrum.cz/') ;" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrum.cz/);" title="Přejít na: http://www.centrum.cz/">
+            <img alt="Náhled www.centrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'7186', x:'title'}, 1, 'http://www.centrum.cz/') ;" title="Přejít na: http://www.centrum.cz/">
+              <strong>Centrum</strong>.cz</a></h3>
+              <p class="description">Domovská stránka 
+              <strong>Centrum</strong>.cz - nejlepší
+              vyhledávací, komunikační a
+              obsahové služby internetu na jednom
+              místě. 
+              <strong>…</strong> ICQ®, 
+              <strong>Centrum</strong></p>
+              <p class="info">
+              <span class="url">www.
+              <strong>centrum</strong>.cz/</span></p>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://user.centrum.cz/?url=http%3A%2F%2Fmail.centrum.cz" onmousedown="return JAK.FCLogger.log('res', {id:'717936673', x:'pict'}, 2, 'http://user.centrum.cz/?url=http%3A%2F%2Fmail.centrum.cz') ;" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//user.centrum.cz/%3Furl%3Dhttp%253A%252F%252Fmail.centrum.cz);" title="Přejít na: http://user.centrum.cz/?url=http%3A%2F%2Fmail.centrum.cz">
+            <img alt="Náhled user.centrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//user.centrum.cz/%3Furl%3Dhttp%253A%252F%252Fmail.centrum.cz" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://user.centrum.cz/?url=http%3A%2F%2Fmail.centrum.cz" onmousedown="return JAK.FCLogger.log('res', {id:'717936673', x:'title'}, 2, 'http://user.centrum.cz/?url=http%3A%2F%2Fmail.centrum.cz') ;" title="Přejít na: http://user.centrum.cz/?url=http%3A%2F%2Fmail.centrum.cz">Přihlášení
+              - 
+              <strong>Centrum</strong>.cz</a></h3>
+              <p class="description">Přihlaste se ke svým
+              oblíbeným službám na 
+              <strong>Centrum</strong>.cz.</p>
+              <p class="info">
+              <span class="url">user.
+              <strong>centrum</strong>.cz/?url=http%3A%2F%2Fmail.​
+              <strong>centrum</strong>.cz</span></p>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://business.center.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'58717', x:'pict'}, 3, 'http://business.center.cz/') ;" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//business.center.cz/);" title="Přejít na: http://business.center.cz/">
+            <img alt="Náhled business.center.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//business.center.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://business.center.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'58717', x:'title'}, 3, 'http://business.center.cz/') ;" title="Přejít na: http://business.center.cz/">business.
+              <strong>center</strong>.cz</a></h3>
+              <p class="description">business.
+              <strong>center</strong>.cz - Informační
+              server pro podnikání 
+              <strong>…</strong> © 1998 - 2011 HAVIT,
+              s.r.o., 3138, Svět modelek, ISSN 1213-7235,
+              e-mail: business@
+              <strong>center</strong>.cz</p>
+              <p class="info">
+              <span class="url">business.
+              <strong>center</strong>.cz/</span></p>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://slovniky.centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'6960', x:'pict'}, 4, 'http://slovniky.centrum.cz/') ;" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//slovniky.centrum.cz/);" title="Přejít na: http://slovniky.centrum.cz/">
+            <img alt="Náhled slovniky.centrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//slovniky.centrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://slovniky.centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'6960', x:'title'}, 4, 'http://slovniky.centrum.cz/') ;" title="Přejít na: http://slovniky.centrum.cz/">
+              <strong>centrum</strong>.cz slovníky -
+              vyhledávání</a></h3>
+              <p class="description">
+              <strong>Centrum</strong>.cz, Registrace,
+              Přihlásit se 
+              <strong>…</strong> 1999 - 2011 © 
+              <strong>centrum</strong> holdings o nás,
+              volná místa, reklama, všeobecné
+              podmínky, nápověda</p>
+              <p class="info">
+              <span class="url">slovniky.
+              <strong>centrum</strong>.cz/</span></p>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.skiricky.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'119719431', x:'pict'}, 5, 'http://www.skiricky.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=412401&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.skiricky.cz/);" title="Přejít na: http://www.skiricky.cz/">
+            <img alt="Náhled www.skiricky.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.skiricky.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.skiricky.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'119719431', x:'title'}, 5, 'http://www.skiricky.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=412401&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.skiricky.cz/">Ski
+              
+              <strong>centrum</strong> Říčky v
+              Orlických horách</a></h3>
+              <p class="description">Ski 
+              <strong>centrum</strong> Říčky v
+              Orlických horách, jež vlastní a
+              provozuje Ski klub Ústí nad Orlicí se
+              nachází na jihovýchodní
+              straně vrchu Zakletý v nadmořské
+              výšce 740</p>
+              <p class="info">
+              <span class="url">www.skiricky.cz/</span> - 
+              <span class="reg">Rychnov nad Kněžnou - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20412401" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=412401&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'119719431', x:'premise'}, 5, 'http://www.skiricky.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=412401&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.cssz.cz/cz/informace/call-centra/" onmousedown="return JAK.FCLogger.log('res', {id:'24338293', x:'pict'}, 6, 'http://www.cssz.cz/cz/informace/call-centra/') ;" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.cssz.cz/cz/informace/call-centra/);" title="Přejít na: http://www.cssz.cz/cz/informace/call-centra/">
+            <img alt="Náhled www.cssz.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.cssz.cz/cz/informace/call-centra/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.cssz.cz/cz/informace/call-centra/" onmousedown="return JAK.FCLogger.log('res', {id:'24338293', x:'title'}, 6, 'http://www.cssz.cz/cz/informace/call-centra/') ;" title="Přejít na: http://www.cssz.cz/cz/informace/call-centra/">ČSSZ
+              - Call 
+              <strong>centra</strong></a></h3>
+              <p class="description">Call 
+              <strong>centrum</strong> důchodového
+              pojištění vyřizuje dotazy
+              veřejnosti a poskytuje informace o
+              důchodech na telefonním čísle
+              257062860, a to každý pracovní
+              den.</p>
+              <p class="info">
+              <span class="url">www.cssz.cz/cz/informace/call-
+              <strong>centra</strong>/</span></p>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.hudebnicentrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'2198330', x:'pict'}, 7, 'http://www.hudebnicentrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=473459&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.hudebnicentrum.cz/);" title="Přejít na: http://www.hudebnicentrum.cz/">
+            <img alt="Náhled www.hudebnicentrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.hudebnicentrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.hudebnicentrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'2198330', x:'title'}, 7, 'http://www.hudebnicentrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=473459&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.hudebnicentrum.cz/">Hudební
+              
+              <strong>centrum</strong> s.r.o.</a></h3>
+              <p class="description">Hudební 
+              <strong>centrum</strong> s.r.o., hudební
+              nástroje a zvuková technika pro
+              všechny muzikanty. 
+              <strong>…</strong> Navštivte Hudební 
+              <strong>centrum</strong> s.r.o. u ShopMania</p>
+              <p class="info">
+              <span class="url">www.
+              <strong>hudebnicentrum</strong>.cz/</span> - 
+              <span class="reg">Hradec Králové - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20473459" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=473459&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'2198330', x:'premise'}, 7, 'http://www.hudebnicentrum.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=473459&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.centrum-zatepleni.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'187181585', x:'pict'}, 8, 'http://www.centrum-zatepleni.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=2525589&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrum-zatepleni.cz/);" title="Přejít na: http://www.centrum-zatepleni.cz/">
+            <img alt="Náhled www.centrum-zatepleni.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrum-zatepleni.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.centrum-zatepleni.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'187181585', x:'title'}, 8, 'http://www.centrum-zatepleni.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=2525589&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.centrum-zatepleni.cz/">
+              <strong>Centrum</strong> Zateplení.cz,
+              fasádní polystyren, zateplení
+              fasád</a></h3>
+              <p class="description">
+              <strong>Centrum</strong>-Zateplení vše na
+              jednom místě - fasádní
+              polystyren, zateplení fasád atd.</p>
+              <p class="info">
+              <span class="url">www.
+              <strong>centrum</strong>-zatepleni.cz/</span> - 
+              <span class="reg">Přerov - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%202525589" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=2525589&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'187181585', x:'premise'}, 8, 'http://www.centrum-zatepleni.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=2525589&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://zooliberec.cz/archa/cz" onmousedown="return JAK.FCLogger.log('res', {id:'742360821', x:'pict'}, 9, 'http://zooliberec.cz/archa/cz') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=406632&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//zooliberec.cz/archa/cz);" title="Přejít na: http://zooliberec.cz/archa/cz">
+            <img alt="Náhled zooliberec.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//zooliberec.cz/archa/cz" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://zooliberec.cz/archa/cz" onmousedown="return JAK.FCLogger.log('res', {id:'742360821', x:'title'}, 9, 'http://zooliberec.cz/archa/cz') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=406632&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://zooliberec.cz/archa/cz">
+              <strong>Centrum</strong> Archa</a></h3>
+              <p class="description">Archa Liberec, 
+              <strong>Centrum</strong> pro zvířata v
+              nouzi Liberec, útulek liberec,
+              zvířecí útulek liberec, ZOO
+              Liberec - Archa,</p>
+              <p class="info">
+              <span class="url">zooliberec.cz/archa/cz</span> - 
+              <span class="reg">Liberec - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20406632" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=406632&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'742360821', x:'premise'}, 9, 'http://zooliberec.cz/archa/cz');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=406632&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.beskydy-info.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'274335', x:'pict'}, 10, 'http://www.beskydy-info.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=399516&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.beskydy-info.cz/);" title="Přejít na: http://www.beskydy-info.cz/">
+            <img alt="Náhled www.beskydy-info.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.beskydy-info.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.beskydy-info.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'274335', x:'title'}, 10, 'http://www.beskydy-info.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=399516&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.beskydy-info.cz/">Beskydy,
+              Beskydské informační 
+              <strong>centrum</strong> - Home</a></h3>
+              <p class="description">. Beskydské
+              informační 
+              <strong>centrum</strong> bude společně se
+              statutárním městem
+              Frýdek-Místek prezentovat letní
+              nabídku turistické oblasti Beskydy a
+              města Frýdku</p>
+              <p class="info">
+              <span class="url">www.beskydy-info.cz/</span> - 
+              <span class="reg">Frýdek-Místek - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20399516" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=399516&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'274335', x:'premise'}, 10, 'http://www.beskydy-info.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=399516&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://aktualne.centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'127711039', x:'pict'}, 11, 'http://aktualne.centrum.cz/') ;" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//aktualne.centrum.cz/);" title="Přejít na: http://aktualne.centrum.cz/">
+            <img alt="Náhled aktualne.centrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//aktualne.centrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://aktualne.centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'127711039', x:'title'}, 11, 'http://aktualne.centrum.cz/') ;" title="Přejít na: http://aktualne.centrum.cz/">Aktuálně.cz
+              - Víte, co se právě děje</a></h3>
+              <p class="description">1999 – 2011 © 
+              <strong>centrum</strong> holdings O nás,
+              Volná místa, Reklama, Všeobecné
+              podmínky, Nápověda</p>
+              <p class="info">
+              <span class="url">aktualne.
+              <strong>centrum</strong>.cz/</span></p>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.kcp.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'9290', x:'pict'}, 12, 'http://www.kcp.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=145661&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.kcp.cz/);" title="Přejít na: http://www.kcp.cz/">
+            <img alt="Náhled www.kcp.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.kcp.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.kcp.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'9290', x:'title'}, 12, 'http://www.kcp.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=145661&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.kcp.cz/">Kongresové
+              
+              <strong>centrum</strong> Praha, a.s. -, kongresy 
+              <strong>…</strong></a></h3>
+              <p class="description">Velké a kvalitně
+              vybavené evropské 
+              <strong>centrum</strong>. 
+              <strong>…</strong> v blízkosti 
+              <strong>centra</strong> města), parking</p>
+              <p class="info">
+              <span class="url">www.kcp.cz/</span> - 
+              <span class="reg">Hlavní město Praha - 
+              <a href="http://www.mapy.cz/?query=loc:50.062077%2014.42861&amp;zoom=14" onmousedown="return JAK.FCLogger.log('res', {id:'9290', x:'geotag'}, 12, 'http://www.kcp.cz/');">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=145661&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.topcentrumcar.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'5355005', x:'pict'}, 13, 'http://www.topcentrumcar.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=226850&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.topcentrumcar.cz/);" title="Přejít na: http://www.topcentrumcar.cz/">
+            <img alt="Náhled www.topcentrumcar.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.topcentrumcar.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.topcentrumcar.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'5355005', x:'title'}, 13, 'http://www.topcentrumcar.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=226850&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.topcentrumcar.cz/">Volkswagen,
+              Audi, TOP 
+              <strong>CENTRUM</strong> car, autorizovaný
+              prodej 
+              <strong>…</strong></a></h3>
+              <p class="description">TOP 
+              <strong>CENTRUM</strong> car - autorizovaný
+              prodejce a servis vozů Volkswagen a Audi -
+              nové nebo předváděcí vozy VW
+              a Audi, autobazar auto-plus</p>
+              <p class="info">
+              <span class="url">www.topcentrumcar.cz/</span> - 
+              <span class="reg">Hodonín - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20226850" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=226850&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'5355005', x:'premise'}, 13, 'http://www.topcentrumcar.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=226850&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.olympia-centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'338401576', x:'pict'}, 14, 'http://www.olympia-centrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=2244986&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.olympia-centrum.cz/);" title="Přejít na: http://www.olympia-centrum.cz/">
+            <img alt="Náhled www.olympia-centrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.olympia-centrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.olympia-centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'338401576', x:'title'}, 14, 'http://www.olympia-centrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=2244986&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.olympia-centrum.cz/">Olympia
+              Brno, Nákupní a zábavní 
+              <strong>centrum</strong></a></h3>
+              <p class="description">Olympia Brno je
+              největší nákupní a
+              zábavní 
+              <strong>centrum</strong> na Moravě, které
+              bylo otevřeno již v roce 1999. Olympia je
+              místem dobrého nákupu a
+              skvělé zábavy</p>
+              <p class="info">
+              <span class="url">www.olympia-
+              <strong>centrum</strong>.cz/</span> - 
+              <span class="reg">Brno-venkov - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%202244986" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=2244986&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'338401576', x:'premise'}, 14, 'http://www.olympia-centrum.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=2244986&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.antivirovecentrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'136478112', x:'pict'}, 15, 'http://www.antivirovecentrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=1896487&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.antivirovecentrum.cz/);" title="Přejít na: http://www.antivirovecentrum.cz/">
+            <img alt="Náhled www.antivirovecentrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.antivirovecentrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.antivirovecentrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'136478112', x:'title'}, 15, 'http://www.antivirovecentrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=1896487&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.antivirovecentrum.cz/">Antivirové
+              
+              <strong>Centrum</strong></a></h3>
+              <p class="description">Vítejte na
+              stránkách Antivirového 
+              <strong>centra</strong></p>
+              <p class="info">
+              <span class="url">www.
+              <strong>antivirovecentrum</strong>.cz/</span> - 
+              <span class="reg">Nový Jičín - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%201896487" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=1896487&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'136478112', x:'premise'}, 15, 'http://www.antivirovecentrum.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=1896487&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.centrumcernymost.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'194366261', x:'pict'}, 16, 'http://www.centrumcernymost.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=415615&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrumcernymost.cz/);" title="Přejít na: http://www.centrumcernymost.cz/">
+            <img alt="Náhled www.centrumcernymost.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrumcernymost.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.centrumcernymost.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'194366261', x:'title'}, 16, 'http://www.centrumcernymost.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=415615&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.centrumcernymost.cz/">
+              <strong>Centrum</strong> Černý
+              Most</a></h3>
+              <p class="description">CineStar pro Vás
+              připravil nové premiéry 
+              <strong>Centrum</strong> Chodov a 
+              <strong>Centrum</strong> Černý Most:
+              první obchodní 
+              <strong>centra</strong> v Praze
+              nabízející dobíjení
+              elektrovozidel</p>
+              <p class="info">
+              <span class="url">www.
+              <strong>centrumcernymost</strong>.cz/</span> - 
+              <span class="reg">Hlavní město Praha - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20415615" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=415615&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'194366261', x:'premise'}, 16, 'http://www.centrumcernymost.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=415615&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.baby-centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'4460907', x:'pict'}, 17, 'http://www.baby-centrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=589797&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.baby-centrum.cz/);" title="Přejít na: http://www.baby-centrum.cz/">
+            <img alt="Náhled www.baby-centrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.baby-centrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.baby-centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'4460907', x:'title'}, 17, 'http://www.baby-centrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=589797&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.baby-centrum.cz/">BABY
+              
+              <strong>CENTRUM</strong> - kočárky,
+              hračky, dětský nábytek 
+              <strong>…</strong></a></h3>
+              <p class="description">Baby 
+              <strong>Centrum</strong> - vše 
+              <strong>pro</strong> Vás i Vaše
+              dítě 
+              <strong>…</strong> Všechny barevné
+              kombinace 
+              <strong>kočárků</strong> Bugaboo
+              máme skladem, jsou pro Vás připraveny
+              ihned k prodeji.</p>
+              <p class="info">
+              <span class="url">www.baby-
+              <strong>centrum</strong>.cz/</span> - 
+              <span class="reg">Pardubice - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20589797" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=589797&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'4460907', x:'premise'}, 17, 'http://www.baby-centrum.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=589797&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.centrumbabylon.cz/cs/babylon/" onmousedown="return JAK.FCLogger.log('res', {id:'514630572', x:'pict'}, 18, 'http://www.centrumbabylon.cz/cs/babylon/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=170137&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrumbabylon.cz/cs/babylon/);" title="Přejít na: http://www.centrumbabylon.cz/cs/babylon/">
+            <img alt="Náhled www.centrumbabylon.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.centrumbabylon.cz/cs/babylon/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.centrumbabylon.cz/cs/babylon/" onmousedown="return JAK.FCLogger.log('res', {id:'514630572', x:'title'}, 18, 'http://www.centrumbabylon.cz/cs/babylon/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=170137&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.centrumbabylon.cz/cs/babylon/">Úvodní
+              stránka, 
+              <strong>Centrum</strong> Babylon Liberec</a></h3>
+              <p class="description">Vítejte na webových
+              stránkách společnosti 
+              <strong>Centrum</strong> Babylon Liberec -
+              největšího krytého
+              zábavního, hotelového a
+              společenského komplexu v ČR</p>
+              <p class="info">
+              <span class="url">www.
+              <strong>centrumbabylon</strong>.cz/cs/babylon/</span>
+              - 
+              <span class="reg">Liberec - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20170137" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=170137&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'514630572', x:'premise'}, 18, 'http://www.centrumbabylon.cz/cs/babylon/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=170137&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.reklama-centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'1227523', x:'pict'}, 19, 'http://www.reklama-centrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=200194&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.reklama-centrum.cz/);" title="Přejít na: http://www.reklama-centrum.cz/">
+            <img alt="Náhled www.reklama-centrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.reklama-centrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.reklama-centrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'1227523', x:'title'}, 19, 'http://www.reklama-centrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=200194&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.reklama-centrum.cz/">Reklama
+              
+              <strong>Centrum</strong> - Reklamní
+              předměty a reklamní
+              dárky</a></h3>
+              <p class="description">Firma Reklama 
+              <strong>centrum</strong> je přímým
+              dovozcem reklamních předmětů,
+              neplatíte zbytečně
+              prostředníkům.</p>
+              <p class="info">
+              <span class="url">www.reklama-
+              <strong>centrum</strong>.cz/</span> - 
+              <span class="reg">Hlavní město Praha - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%20200194" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=200194&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'1227523', x:'premise'}, 19, 'http://www.reklama-centrum.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=200194&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont parentresult nosubresult">
+        <table class="result">
+          <tr>
+            <td class="limiter">
+            <a class="elastic" href="http://www.nakupnicentrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'594559821', x:'pict'}, 20, 'http://www.nakupnicentrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=2110171&amp;kw=centrum&amp;enc=utf-8');" style="background-image:url(http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.nakupnicentrum.cz/);" title="Přejít na: http://www.nakupnicentrum.cz/">
+            <img alt="Náhled www.nakupnicentrum.cz" class="screenshot" height="" src="http://fimg.seznam.cz/?spec=ft100x75&amp;url=http%3A//www.nakupnicentrum.cz/" width="100"/>
+            </a> 
+            <div class="text">
+              <h3>
+              <a href="http://www.nakupnicentrum.cz/" onmousedown="return JAK.FCLogger.log('res', {id:'594559821', x:'title'}, 20, 'http://www.nakupnicentrum.cz/') || JAK.FCLogger.logFirmy('http://stat.mapy.cz/?act=FTX_CW&amp;premid=2110171&amp;kw=centrum&amp;enc=utf-8');" title="Přejít na: http://www.nakupnicentrum.cz/">INTERNETOVÝ
+              OBCHOD 
+              <strong>…</strong> nákupní 
+              <strong>centrum</strong>, Nakupnicentrum.cz</a></h3>
+              <p class="description">Internetový obchod,
+              nákupní 
+              <strong>centrum</strong>, zboží, ceny</p>
+              <p class="info">
+              <span class="url">www.
+              <strong>nakupnicentrum</strong>.cz/</span> - 
+              <span class="reg">Chrudim - 
+              <a href="http://www.mapy.cz/?query=id%3A%20premise%202110171" onmousedown="var im = new Image(1,1); im.src='http://stat.mapy.cz/?act=FTX_CP&amp;premid=2110171&amp;kw=centrum&amp;enc=utf-8'; JAK.FCLogger.log('res', {id:'594559821', x:'premise'}, 20, 'http://www.nakupnicentrum.cz/');" title="Zobrazit výsledek na mapě">Zobrazit
+              na mapě</a></span></p>
+              <img alt="" class="blind" height="1" src="http://stat.mapy.cz/?act=FTX_I&amp;premid=2110171&amp;kw=centrum&amp;enc=utf-8" width="1"/>
+            </div></td>
+          </tr>
+        </table>
+      </div>
+      <hr class="blind"/>
+      <div class="resultcont hint">
+        <table class="result na-zbozi">
+          <tr>
+            <td class="limiter">
+              <div class="hintImage">
+                <a href="http://www.zbozi.cz/?forceScreen=products&amp;r=hint&amp;q=centrum" onmousedown="return JAK.FCLogger.log('hint', {id:'zbozi', x: 'pict', l:'bottom'});" title="Přejít do hledání na Zboží.cz">
+                <img alt="" height="75" src="http://images.zbozi.cz/zbozi-images/4d7a44c0f9139720100a0000.jpg" width="100"/>
+                </a>
+              </div>
+              <div class="text">
+                <h3>
+                <a href="http://www.zbozi.cz/?forceScreen=products&amp;r=hint&amp;q=centrum" onmousedown="return JAK.FCLogger.log('hint', {id:'zbozi', x: 'title', l:'bottom'});">Našli
+                jsme 
+                <strong>centrum</strong></a> » 
+                <span class="url">Zboží.cz</span></h3>
+                <ul>
+                  <li>
+                    <p>Centrum AZ s Multi-Efektem tbl.100 
+                    <span class="price">od 379,- Kč s
+                    DPH</span></p>
+                  </li>
+                  <li>
+                    <p>Centrum AZ s Multi-Efektem tbl.60 
+                    <span class="price">od 299,- Kč s
+                    DPH</span></p>
+                  </li>
+                  <li>
+                    <p>Centrum Cardio tbl.60 
+                    <span class="price">od 309,- Kč s
+                    DPH</span></p>
+                  </li>
+                </ul>
+                <p class="more">
+                  <a href="http://www.zbozi.cz/?forceScreen=products&amp;r=hint&amp;q=centrum" onmousedown="return JAK.FCLogger.log('hint', {id:'zbozi', x: 'other', l:'bottom'});">Další
+                  výrobky »</a>
+                </p>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+<script type="text/javascript" xml:space="preserve">
+ JAK.Fulltext.hintHorizontalAlign(); 
+      </script></div>
+      <hr/>
+      <p id="resultCount">Zobrazujeme 
+      <strong>1</strong> - 
+      <strong>20</strong> z 
+      <strong>32 909 722</strong> nalezených</p>
+      <div id="paging">
+      <h2 class="blind">Stránkování</h2>
+      <span class="pad active bottom-red">1</span> 
+      <span class="pad top-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=21">2</a>
+      </span> 
+      <span class="pad bottom-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=41">3</a>
+      </span> 
+      <span class="pad top-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=61">4</a>
+      </span> 
+      <span class="pad bottom-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=81">5</a>
+      </span> 
+      <span class="pad top-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=101">6</a>
+      </span> 
+      <span class="pad bottom-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=121">7</a>
+      </span> 
+      <span class="pad top-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=141">8</a>
+      </span> 
+      <span class="pad bottom-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=161">9</a>
+      </span> 
+      <span class="pad top-gray">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=181">10</a>
+      </span> 
+      <span class="next">
+        <a href="/?q=centrum&amp;count=20&amp;pId=k0UYvnldwwD4VXTdMdmB&amp;from=21">Další</a>
+      </span></div></div>
+      <hr class="blind"/>
+      <div id="foot">
+      <p id="seznam-logo">
+        <span class="blind">výsledky dodává
+        Seznam</span>
+      </p>
+      <div class="searchForm" id="bottomSearch">
+        <form action="/" method="get">
+        <label class="blind" for="q2">Hledej:</label> 
+        <input class="text" id="q2" name="q" type="text" value="centrum"/>
+         
+        <input name="sId" type="hidden" value="k0UYvnldwwD4VXTdMdmB"/>
+         
+        <span class="bf-switch blind">
+        <input class="bf" id="bf" name="blindFriendly" type="checkbox" value="1"/>
+         
+        <label for="bf">přístupná
+        verze</label></span> 
+        <input class="submit" type="submit" value="Vyhledat Seznamem"/>
+         
+        <input id="sourceid" name="sourceid" type="hidden" value="bottom"/>
+         
+        <input id="thru" name="thru" type="hidden" value=""/>
+        </form>
+      </div>
+      <h2 class="blind">Tiráž</h2>
+      <p>
+      <span class="add">
+        <a href="pridej-stranku">Přidat stránku do
+        hledání</a>
+      </span> - 
+      <span class="stats">
+      <a href="/stats?collocation=centrum">Statistika dotazu "
+      <strong>centrum</strong>"</a></span></p>
+      <p>© 1996 - 2011 Seznam.cz, a.s.</p>
+      <p>
+      <a href="http://www.seznam.cz">Seznam</a> - 
+      <a href="http://napoveda.seznam.cz/cz/fulltext-hledani-v-internetu/zadavani-dotazu/">Nápověda</a>
+      - 
+      <a href="http://napoveda.seznam.cz/cz/services/">Technická
+      podpora</a> - 
+      <a href="/nahlasit-spam?type=search&amp;query=centrum">Nahlášení
+      spamu</a> - 
+      <a href="http://www.sklik.cz/">Reklama</a> - 
+      <a href="/?q=centrum&amp;sId=k0UYvnldwwD4VXTdMdmB&amp;format=rss">RSS</a></p>
+      <img alt="" height="1" src="http://ad.seznam.cz/miss?zoneId=seznam.search.hits&amp;collocation=centrum&amp;count=1&amp;r=0.325915" style="position:absolute;top:-1px;left:-1px;" width="1"/>
+       
+<!-- (C)2000-2008 Gemius SA - gemiusAudience / seznam.cz / cr prvni stranka -->
+       
+<script type="text/javascript" xml:space="preserve">
+ /* &lt;! */ var pp_gemius_identifier = new
+String('ofgwDT7pLy73NmR77qj8APU2jw6d1Brwo7my216t8kv.57');
+/* ]] */ 
+      </script> 
+<script src="http://1.im.cz/ad/gemius.js" type="text/javascript" xml:space="preserve"/></div>
+    </div>
+  </body>
